@@ -1,0 +1,120 @@
+  /******************************************* 
+  Rich Text Styles
+  *******************************************/
+  article .rich-text .table-of-contents {
+    position: fixed;
+    padding-right: 20px;
+    right: 0;
+    top: 20px;
+    /* width: 500px; */
+    background: yellowgreen;
+  }
+  /* Headers */
+  article .rich-text h1 {
+    @apply text-4xl font-bold mb-8 text-gray;
+  }
+
+  article .rich-text h2 {
+    @apply text-3xl font-bold mb-8 text-gray;
+  }
+
+  article .rich-text h3 {
+    @apply text-2xl font-bold mb-6 text-gray;
+  }
+
+  article .rich-text h4 {
+    @apply text-xl font-bold mb-4 text-gray;
+  }
+
+  article .rich-text h5 {
+    @apply text-lg font-bold mb-4 text-gray;
+  }
+
+  article .rich-text h6 {
+    @apply text-base font-bold mb-4 text-gray;
+  }
+
+  /* Horizontal rules */
+  article .rich-text hr {
+    @apply text-gray my-8;
+  }
+
+  article .rich-text a {
+    @apply text-gray underline text-xl leading-relaxed;
+  }
+
+  /* Typographic replacements */
+  article .rich-text p {
+    @apply mb-8 text-xl leading-relaxed text-gray;
+  }
+
+  /* Emphasis */
+  article .rich-text strong {
+    @apply font-bold text-xl leading-relaxed;
+  }
+
+  article .rich-text em {
+    @apply italic text-xl leading-relaxed;
+  }
+
+  article .rich-text del {
+    @apply line-through text-xl leading-relaxed;
+  }
+
+  /* Blockquotes */
+  article .rich-text blockquote {
+    @apply border-l-4 border-gray pl-4 py-2 mb-4;
+  }
+
+  /* Lists */
+  article .rich-text ul {
+    @apply list-disc pl-4 mb-4 text-gray;
+  }
+
+  article .rich-text ol {
+    @apply list-decimal pl-4 mb-4 text-gray;
+  }
+
+  article .rich-text li {
+    @apply mb-2 text-gray;
+  }
+
+  article .rich-text li > ul {
+    @apply list-disc pl-4 mb-2;
+  }
+
+  article.rich-text li > ol {
+    @apply list-decimal pl-4 mb-2;
+  }
+
+  /* Code blocks */
+  article .rich-text pre {
+    @apply font-mono text-gray  rounded p-4  my-6;
+  }
+
+  article .rich-text code {
+    @apply font-mono text-gray  rounded px-2 py-1;
+  }
+
+  /* Tables */
+  article .rich-text table {
+    @apply w-full border-collapse text-gray my-6;
+  }
+
+  article .rich-text th {
+    @apply text-gray text-left py-2 px-4 font-semibold border-b;
+  }
+
+  article .rich-text td {
+    @apply py-2 px-4 border-b text-gray;
+  }
+
+  /* Images */
+  article .rich-text img {
+    @apply w-full object-cover rounded-xl my-6;
+  }
+
+  /* Custom containers */
+  article .rich-text .warning {
+    @apply bg-yellow-100 border-yellow-500 text-yellow-700 px-4 py-2 rounded-lg mb-4;
+  }
