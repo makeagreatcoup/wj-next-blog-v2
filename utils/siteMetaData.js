@@ -4,11 +4,11 @@ const siteMetadata = {
     author: 'makeagreatcoup',
     headerTitle: 'Next.js 博客',
     description: 'Next.js 博客',
-    language: 'zh-cn',
+    language: 'zh-CN',
     theme: 'light', // system, dark or light
-    siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
+    siteUrl: 'https://create-blog-with-nextjs.vercel.app', 
     siteLogo: '/logo.png',
-    socialBanner: '/social-banner.png', // add social banner in the public folder
+    socialBanner: '/social-banner.png', 
     email: 'a1015861859@gmail.com', 
     github: 'https://github.com/makeagreatcoup',
     twitter: 'https://twitter.com',

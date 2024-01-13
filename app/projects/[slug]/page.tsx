@@ -73,15 +73,17 @@ const PorjectBySlug = async ({ params }: { params: { slug: string } }) => {
           website={website}
           github={github}
         />
-        <MotionImg urls={imagesUrl}/>
-        <article className=" prose max-w-full w-full my-4 px-12 relative">
-          <div
-            className="rich-text"
-            dangerouslySetInnerHTML={{
-              __html: MarkdownTocHtml({ markdown: description }),
-            }}
-          ></div>
-        </article>
+        {imagesUrl && <MotionImg urls={imagesUrl} />}
+        {body && (
+          <article className=" prose max-w-full w-full my-4 px-12 relative">
+            <div
+              className="rich-text"
+              dangerouslySetInnerHTML={{
+                __html: MarkdownTocHtml({ markdown: body }),
+              }}
+            ></div>
+          </article>
+        )}
       </article>
     </>
   );
