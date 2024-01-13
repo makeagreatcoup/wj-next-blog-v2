@@ -48,6 +48,7 @@ const MotionImg = ({ urls }: { urls: string[] }) => {
                     className=" object-center rounded-lg absolute cursor-pointer opacity-1"
                   />
                   <div
+                    key={'div'+index}
                     className={`w-[100px] h-[50px] border-dark dark:border-red-500 border-2 absolute  rounded-lg p-1 transition-all ease-linear duration-300 ${
                       selected === index ? "opacity-1" : "opacity-0"
                     }`}
