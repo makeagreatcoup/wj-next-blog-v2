@@ -8,7 +8,6 @@ const SkillList = [
   "andt design",
   "strapi",
   "firebase",
-  "framer motion",
 ];
 
 const Skills = () => {

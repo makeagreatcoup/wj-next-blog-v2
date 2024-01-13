@@ -6,7 +6,7 @@ const siteMetadata = {
     description: 'Next.js 博客',
     language: 'zh-CN',
     theme: 'light', // system, dark or light
-    siteUrl: 'https://create-blog-with-nextjs.vercel.app', 
+    siteUrl: process.env.siteUrl||'https://create-blog-with-nextjs.vercel.app', 
     siteLogo: '/logo.png',
     socialBanner: '/social-banner.png', 
     email: 'a1015861859@gmail.com', 

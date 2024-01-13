@@ -78,15 +78,15 @@ const Footer = () => {
         <span className="text-center">
           &copy;2024 makeagreatcoup. All rights reserved.
         </span>
-        <Link
+        {/* <Link
           href="/sitemap.xml"
           className="text-center underline my-4 md:my-0"
         >
           sitemap.xml
-        </Link>
+        </Link> */}
         <div className="text-center">
           Made with &hearts; by{" "}
-          <a href="https://devdreaming.com" className="underline" target="_blank">
+          <a href="https://github.com/makeagreatcoup" className="underline" target="_blank">
             makeagreatcoup
           </a>
         </div>

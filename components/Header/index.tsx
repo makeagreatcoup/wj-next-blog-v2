@@ -79,9 +79,9 @@ const Header = () => {
         <Link href="/about" className="mx-2">
           关于
         </Link>
-        <Link href="/contact" className="mx-2">
+        {/* <Link href="/contact" className="mx-2">
           联系
-        </Link>
+        </Link> */}
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={cx(
@@ -111,9 +111,9 @@ const Header = () => {
         <Link href="/about" className="mx-2">
         关于
         </Link>
-        <Link href="/contact" className="mx-2">
+        {/* <Link href="/contact" className="mx-2">
         联系
-        </Link>
+        </Link> */}
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={cx(
@@ -130,7 +130,7 @@ const Header = () => {
         </button>
       </nav>
       <div className=" hidden sm:flex items-center">
-        <a
+        {/* <a
           href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Reach out to me via LinkedIn"
@@ -145,7 +145,7 @@ const Header = () => {
           target="_blank"
         >
           <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
-        </a>
+        </a> */}
         <a
           href={siteMetadata.github}
           className="inline-block w-6 h-6 mr-4"
@@ -154,14 +154,14 @@ const Header = () => {
         >
           <GithubIcon className=" w-full hover:scale-125 transition-all ease duration-200 dark:fill-light" />
         </a>
-        <a
+        {/* <a
           href={siteMetadata.dribbble}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Dribbble"
           target="_blank"
         >
           <DribbbleIcon className="hover:scale-125 transition-all ease duration-200" />
-        </a>
+        </a> */}
       </div>
     </header>
   );
