@@ -1,4 +1,3 @@
-import CategoriesList from '@/components/CategoryComponents/CategoriesList';
 import TagsList from '@/components/TagComponents/TagsList';
 import React from 'react'
 

@@ -2,7 +2,7 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import { cx } from "@/utils";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   DribbbleIcon,
   GithubIcon,
@@ -16,9 +16,14 @@ import Logo from "./Logo";
 import {useThemeSwitch} from '@/Hooks/useThemeSwitch'
 
 const Header = () => {
-  // const {theme,switchTheme} = useContext(ThemeContext)
-  const { mode, setMode } = useThemeSwitch();
+  const {theme,switchTheme} = useContext(ThemeContext)
+  // const { mode, setMode } = useThemeSwitch();
   const [click, setClick] = useState(false);
+  const [currentClass ,setCurrentClass] = useState("")
+  useEffect(()=>{
+    setCurrentClass(theme === "light" ? "bg-dark text-light" : "bg-light text-dark")
+  },[theme])
+
   return (
     <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between">
       <Logo />
@@ -83,14 +88,14 @@ const Header = () => {
           联系
         </Link> */}
         <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          onClick={() => switchTheme(theme === "light" ? "dark" : "light")}
           className={cx(
             "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+            currentClass
           )}
           aria-label="theme-switcher"
         >
-          {mode === "light" ? (
+          {theme === "light" ? (
             <MoonIcon className={"fill-dark"} />
           ) : (
             <SunIcon className={"fill-dark"} />
@@ -115,17 +120,17 @@ const Header = () => {
         联系
         </Link> */}
         <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          onClick={() => switchTheme(theme === "light" ? "dark" : "light")}
           className={cx(
             "w-6 h-6  ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+            currentClass
           )}
           aria-label="theme-switcher"
         >
-          {mode === "light" ? (
+          {theme === "light" ? (
             <MoonIcon className={"fill-dark"} />
           ) : (
-            <SunIcon className={"fill-dark"} />
+            <SunIcon className={"fill-light"} />
           )}
         </button>
       </nav>

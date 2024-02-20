@@ -2,7 +2,10 @@ import { fetchAPI } from "../[lang]/utils/fetch-api";
 
 export const getTags = async () => {
   const data = {
-    populate: true,
+    populate: {
+      projects:true
+    },
+
   };
   return await fetchAPI("/tags", data);
 };

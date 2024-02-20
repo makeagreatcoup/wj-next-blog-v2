@@ -6,8 +6,8 @@ import siteMetadata from "@/utils/siteMetaData";
 import { cx } from "@/utils";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/provider/ThemeProvider";
+import { ThemeContextProvider } from "@/context/ThemeContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,31 +63,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cx(
+      <body className={cx(
           inter.variable,
           manrope.variable,
           "font-mr bg-light dark:bg-dark"
         )}
       >
-        <Script id="theme-switcher" strategy="beforeInteractive">
-          {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.documentElement.classList.add('dark')
-            } else {
-              document.documentElement.classList.remove('dark')
-            }`}
-        </Script>
-        {/* <ThemeContextProvider> */}
-          {/* <ThemeProvider> */}
-            <div className="">
-              <div className="">
-                <Header />
-                {children}
-                <Footer />
-              </div>
+        <ThemeContextProvider>
+          <ThemeProvider>
+            <div className="mainContent">
+            <Header />
+            {children}
+            <Footer />
             </div>
-          {/* </ThemeProvider> */}
-        {/* </ThemeContextProvider> */}
+
+          </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

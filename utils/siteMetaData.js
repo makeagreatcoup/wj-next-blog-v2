@@ -7,7 +7,7 @@ const siteMetadata = {
     language: 'zh-CN',
     theme: 'light', // system, dark or light
     siteUrl: process.env.siteUrl||'https://create-blog-with-nextjs.vercel.app', 
-    siteLogo: '/logo.png',
+    siteLogo: '/wujijuw-high-resolution-logo-black-transparent.svg',
     socialBanner: '/social-banner.png', 
     email: 'a1015861859@gmail.com', 
     github: 'https://github.com/makeagreatcoup',
