@@ -7,7 +7,7 @@ const MotionImg = ({ urls }: { urls: string[] }) => {
   return (
     <>
       <div className="w-full   px-10 flex flex-col justify-center items-center gap-5 my-3">
-        <div className="w-[800px] h-[400px] overflow-hidden rounded-md">
+        <div className="w-[400px] md:w-[600px] lg:w-[800px] h-[400px] overflow-hidden rounded-md">
           <div className=" w-full h-full flex flex-row overflow-hidden relative">
             {urls &&
               urls.map((imageUrl: any, index: number) => (
@@ -24,15 +24,15 @@ const MotionImg = ({ urls }: { urls: string[] }) => {
                       alt={""}
                       key={index}
                       fill
-                      className=" object-center "
-                      onClick={() => setSelected(index)}
+                      className=" object-contain "
+                      // onClick={() => setSelected(index)}
                     />
                   </div>
                 </>
               ))}
           </div>
         </div>
-        <div className=" w-[800px] h-[50px] flex justify-evenly">
+        <div className=" w-[400px] md:w-[600px] lg:w-[800px] h-[50px] flex justify-evenly">
           {urls &&
             urls.map((imageUrl: any, index: number) => (
               <>
